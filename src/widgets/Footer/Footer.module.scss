@@ -1,0 +1,35 @@
+@use '../../shared/config/tokens' as *;
+
+.footer {
+  padding: $space-xl 0;
+  border-top: $border-hairline;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-lg;
+}
+
+.text {
+  color: $color-text-muted;
+  font-size: 14px;
+}
+
+.links {
+  display: flex;
+  gap: $space-lg;
+}
+
+.link {
+  color: $color-text-secondary;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-accent;
+  }
+}

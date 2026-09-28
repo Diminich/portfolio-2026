@@ -1,0 +1,30 @@
+@use '../../config/tokens' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  padding: $space-lg;
+  border: $border-hairline;
+  border-radius: $radius-lg;
+  background-color: $color-surface;
+  transition: border-color $transition-fast;
+
+  &:hover {
+    border-color: $color-border-hover;
+  }
+}
+
+.value {
+  color: $color-accent;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.label {
+  color: $color-text-secondary;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}

@@ -1,0 +1,30 @@
+@use '../../shared/config/tokens' as *;
+
+.about {
+  padding: $space-4xl 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-3xl;
+  align-items: start;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
+.paragraph {
+  color: $color-text-secondary;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}

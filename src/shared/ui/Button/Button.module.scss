@@ -1,0 +1,52 @@
+@use '../../config/tokens' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  padding: 12px $space-lg;
+  border: none;
+  border-radius: $radius-md;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color $transition-fast, border-color $transition-fast,
+    color $transition-fast;
+
+  &:focus-visible {
+    outline: 2px solid $color-accent-hover;
+    outline-offset: 2px;
+  }
+}
+
+.primary {
+  background-color: $color-accent;
+  color: $color-text-primary;
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+
+  &:active {
+    background-color: $color-accent-light;
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  border: $border-hairline;
+  color: $color-text-primary;
+
+  &:hover {
+    border-color: $color-border-hover;
+    background-color: $color-surface;
+  }
+
+  &:active {
+    background-color: $color-surface-hover;
+  }
+}

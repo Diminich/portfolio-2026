@@ -1,0 +1,22 @@
+@use '../../config/tokens' as *;
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  padding: 6px 12px;
+  border: $border-hairline;
+  border-radius: $radius-sm;
+  background-color: $color-surface;
+  color: $color-accent;
+  font-family: $font-family-mono;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  white-space: nowrap;
+  transition: border-color $transition-fast;
+
+  &:hover {
+    border-color: $color-border-hover;
+  }
+}

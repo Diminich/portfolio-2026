@@ -1,0 +1,66 @@
+@use '../../shared/config/tokens' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+  border-bottom: $border-hairline;
+  background-color: $color-header-bg;
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  color: $color-accent;
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-accent-hover;
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: $space-xl;
+}
+
+.link {
+  position: relative;
+  color: $color-text-secondary;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    border-radius: $radius-full;
+    background-color: $color-accent;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform $transition-fast;
+  }
+
+  &:hover {
+    color: $color-text-primary;
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}

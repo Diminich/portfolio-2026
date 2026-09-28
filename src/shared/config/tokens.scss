@@ -1,0 +1,49 @@
+// Design tokens. Single source of truth for the whole app.
+// Consumed by global styles and every *.module.scss via: @use '.../tokens' as *;
+
+$color-bg: #0a0a0f;
+$color-bg-secondary: #0d0d12;
+$color-surface: #16161f;
+$color-surface-hover: #1c1c26;
+$color-border: #26262f;
+$color-border-hover: #36363f;
+
+$color-text-primary: #ffffff;
+$color-text-secondary: #a1a1aa;
+$color-text-muted: #71717a;
+
+$color-accent: #8b5cf6;
+$color-accent-hover: #a78bfa;
+$color-accent-light: #c4b5fd;
+$color-accent-glow: rgba(139, 92, 246, 0.3);
+
+$color-header-bg: rgba(10, 10, 15, 0.8);
+
+$font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-family-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+$container-max-width: 1200px;
+$container-padding: 24px;
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-full: 9999px;
+
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-2xl: 48px;
+$space-3xl: 64px;
+$space-4xl: 96px;
+
+$transition-fast: 0.2s ease;
+
+$border-hairline: 1px solid $color-border;
+$border-hairline-hover: 1px solid $color-border-hover;
+$card-surface: $color-surface $border-hairline;
+
+$z-header: 100;

@@ -1,0 +1,10 @@
+@use '../../config/tokens' as *;
+
+.title {
+  margin-bottom: $space-2xl;
+  color: $color-text-primary;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
