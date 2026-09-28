@@ -17,15 +17,27 @@
 }
 
 .logo {
-  color: $color-accent;
-  font-size: 24px;
-  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  background: $color-logo;
+  border-radius: $radius-sm;
   text-decoration: none;
-  transition: color $transition-fast;
+  transition: filter $transition-fast;
 
   &:hover {
-    color: $color-accent-hover;
+    filter: brightness(1.1);
   }
+}
+
+.badge {
+  color: $color-text-primary;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .links {

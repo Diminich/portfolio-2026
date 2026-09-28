@@ -1,3 +1,5 @@
+import { GITHUB_URL, EXAMPLE_URL } from '../../shared/config/constants';
+
 export interface Project {
   id: string;
   title: string;
@@ -16,8 +18,8 @@ export const projects: Project[] = [
       'Метрики в реальном времени, графики активности и гибкие фильтры для управления SaaS-платформой.',
     image: '/images/project-1.svg',
     tags: ['React', 'TypeScript', 'Tailwind', 'Recharts'],
-    liveDemoUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    liveDemoUrl: EXAMPLE_URL,
+    githubUrl: GITHUB_URL,
   },
   {
     id: 'booking-flow',
@@ -26,8 +28,8 @@ export const projects: Project[] = [
       'Пошаговый процесс бронирования услуг с интерактивным календарём и моментальным подтверждением.',
     image: '/images/project-2.svg',
     tags: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
-    liveDemoUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    liveDemoUrl: EXAMPLE_URL,
+    githubUrl: GITHUB_URL,
   },
   {
     id: 'task-manager',
@@ -36,8 +38,8 @@ export const projects: Project[] = [
       'Канбан-доска с drag-and-drop, фильтрами по приоритету и интеграцией с календарём.',
     image: '/images/project-3.svg',
     tags: ['React', 'TypeScript', 'Zustand', 'DnD Kit'],
-    liveDemoUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    liveDemoUrl: EXAMPLE_URL,
+    githubUrl: GITHUB_URL,
   },
   {
     id: 'e-commerce',
@@ -46,7 +48,7 @@ export const projects: Project[] = [
       'Каталог товаров с фильтрами, корзиной и оформлением заказа. Адаптивный дизайн.',
     image: '/images/project-4.svg',
     tags: ['Next.js', 'TypeScript', 'Prisma', 'Stripe'],
-    liveDemoUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    liveDemoUrl: EXAMPLE_URL,
+    githubUrl: GITHUB_URL,
   },
 ];

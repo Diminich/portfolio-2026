@@ -1,11 +1,12 @@
 import { Container } from '../../shared/ui/Container/Container';
 import { SectionTitle } from '../../shared/ui/SectionTitle/SectionTitle';
 import { experiences } from '../../entities/experience/experience';
+import { SECTION_IDS } from '../../shared/config/constants';
 import styles from './Experience.module.scss';
 
 export function Experience() {
   return (
-    <section id="experience" className={styles.experience}>
+    <section id={SECTION_IDS.experience} className={styles.experience}>
       <Container>
         <SectionTitle>Опыт</SectionTitle>
         <div className={styles.list}>

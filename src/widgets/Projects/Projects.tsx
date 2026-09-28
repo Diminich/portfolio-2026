@@ -2,11 +2,12 @@ import { Container } from '../../shared/ui/Container/Container';
 import { SectionTitle } from '../../shared/ui/SectionTitle/SectionTitle';
 import { Tag } from '../../shared/ui/Tag/Tag';
 import { projects } from '../../entities/project/project';
+import { SECTION_IDS } from '../../shared/config/constants';
 import styles from './Projects.module.scss';
 
 export function Projects() {
   return (
-    <section id="projects" className={styles.projects}>
+    <section id={SECTION_IDS.projects} className={styles.projects}>
       <Container>
         <SectionTitle>Проекты</SectionTitle>
         <div className={styles.grid}>

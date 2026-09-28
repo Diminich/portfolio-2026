@@ -1,6 +1,7 @@
 import { Container } from '../../shared/ui/Container/Container';
 import { SectionTitle } from '../../shared/ui/SectionTitle/SectionTitle';
 import { StatCard } from '../../shared/ui/StatCard/StatCard';
+import { SECTION_IDS } from '../../shared/config/constants';
 import styles from './About.module.scss';
 
 const stats = [
@@ -10,7 +11,7 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className={styles.about}>
+    <section id={SECTION_IDS.about} className={styles.about}>
       <Container>
         <SectionTitle>О себе</SectionTitle>
         <div className={styles.content}>

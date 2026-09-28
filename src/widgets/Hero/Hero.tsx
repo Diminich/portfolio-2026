@@ -1,29 +1,30 @@
 import { Container } from '../../shared/ui/Container/Container';
 import { Button } from '../../shared/ui/Button/Button';
+import { NAME, GITHUB_URL, LINKEDIN_URL, TELEGRAM_URL, SECTION_IDS } from '../../shared/config/constants';
 import styles from './Hero.module.scss';
 
 export function Hero() {
   return (
-    <section id="top" className={styles.hero}>
+    <section id={SECTION_IDS.top} className={styles.hero}>
       <Container>
         <div className={styles.content}>
           <div className={styles.text}>
             <h1 className={styles.title}>
-              Привет, я <span className={styles.accent}>Дмитрий</span>
+              Привет, я <span className={styles.accent}>{NAME}</span>
             </h1>
             <p className={styles.subtitle}>
               Frontend-разработчик с опытом создания быстрых и отзывчивых
               интерфейсов. Фокус на чистую архитектуру и пользовательский опыт.
             </p>
             <div className={styles.actions}>
-              <Button href="#projects">Смотреть проекты</Button>
-              <Button href="#contact" variant="secondary">
+              <Button href={`#${SECTION_IDS.projects}`}>Смотреть проекты</Button>
+              <Button href={`#${SECTION_IDS.contact}`} variant="secondary">
                 Связаться
               </Button>
             </div>
             <div className={styles.socials}>
               <a
-                href="https://github.com"
+                href={GITHUB_URL}
                 className={styles.social}
                 aria-label="GitHub"
                 target="_blank"
@@ -34,7 +35,7 @@ export function Hero() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href={LINKEDIN_URL}
                 className={styles.social}
                 aria-label="LinkedIn"
                 target="_blank"
@@ -45,7 +46,7 @@ export function Hero() {
                 </svg>
               </a>
               <a
-                href="https://telegram.org"
+                href={TELEGRAM_URL}
                 className={styles.social}
                 aria-label="Telegram"
                 target="_blank"
@@ -58,7 +59,7 @@ export function Hero() {
             </div>
           </div>
           <div className={styles.avatar}>
-            <img src="/images/avatar.svg" alt="Дмитрий" />
+            <img src="/images/avatar.svg" alt={NAME} />
           </div>
         </div>
       </Container>

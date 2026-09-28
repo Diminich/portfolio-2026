@@ -1,12 +1,8 @@
 import { Container } from '../../shared/ui/Container/Container';
+import { NAME, MAILTO_URL, SOCIAL_LINKS } from '../../shared/config/constants';
 import styles from './Footer.module.scss';
 
-const links = [
-  { label: 'GitHub', href: 'https://github.com' },
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: 'Telegram', href: 'https://telegram.org' },
-  { label: 'Email', href: 'mailto:hello@example.com' },
-];
+const links = [...SOCIAL_LINKS, { label: 'Email', href: MAILTO_URL, ariaLabel: 'Email' }];
 
 export function Footer() {
   return (
@@ -14,7 +10,7 @@ export function Footer() {
       <Container>
         <div className={styles.content}>
           <p className={styles.text}>
-            © {new Date().getFullYear()} Дмитрий. Все права защищены.
+            © {new Date().getFullYear()} {NAME}. Все права защищены.
           </p>
           <ul className={styles.links}>
             {links.map((link) => (

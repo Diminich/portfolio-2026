@@ -1,6 +1,7 @@
 import { Container } from '../../shared/ui/Container/Container';
 import { SectionTitle } from '../../shared/ui/SectionTitle/SectionTitle';
 import { Tag } from '../../shared/ui/Tag/Tag';
+import { SECTION_IDS } from '../../shared/config/constants';
 import styles from './Skills.module.scss';
 
 const skills = [
@@ -25,7 +26,7 @@ const skills = [
 
 export function Skills() {
   return (
-    <section id="skills" className={styles.skills}>
+    <section id={SECTION_IDS.skills} className={styles.skills}>
       <Container>
         <SectionTitle>Навыки</SectionTitle>
         <div className={styles.grid}>
