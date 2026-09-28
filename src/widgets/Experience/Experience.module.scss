@@ -49,3 +49,15 @@
   font-size: 16px;
   line-height: 1.6;
 }
+
+@media (max-width: #{$breakpoint-phone}) {
+  .header {
+    flex-direction: column;
+    gap: $space-xs;
+    margin-bottom: $space-sm;
+  }
+
+  .period {
+    white-space: normal;
+  }
+}

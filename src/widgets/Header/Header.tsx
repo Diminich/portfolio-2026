@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Container } from '../../shared/ui/Container/Container';
 import { SECTION_IDS } from '../../shared/config/constants';
 import styles from './Header.module.scss';
@@ -11,17 +12,42 @@ const navLinks = [
 ];
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className={styles.header}>
       <Container>
         <nav className={styles.nav}>
-          <a href={`#${SECTION_IDS.top}`} className={styles.logo} aria-label="На главную">
+          <a
+            href={`#${SECTION_IDS.top}`}
+            className={styles.logo}
+            aria-label="На главную"
+          >
             <span className={styles.badge}>D</span>
           </a>
-          <ul className={styles.links}>
+          <button
+            type="button"
+            className={styles.burger}
+            aria-expanded={isOpen}
+            aria-controls="nav-links"
+            aria-label="Меню"
+            onClick={() => setIsOpen((prev) => !prev)}
+          >
+            <span className={styles.burgerLine} />
+            <span className={styles.burgerLine} />
+            <span className={styles.burgerLine} />
+          </button>
+          <ul
+            id="nav-links"
+            className={isOpen ? `${styles.links} ${styles.open}` : styles.links}
+          >
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className={styles.link}>
+                <a
+                  href={link.href}
+                  className={styles.link}
+                  onClick={() => setIsOpen(false)}
+                >
                   {link.label}
                 </a>
               </li>

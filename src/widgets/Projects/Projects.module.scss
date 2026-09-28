@@ -84,3 +84,21 @@
     color: $color-accent-hover;
   }
 }
+
+@media (max-width: #{$breakpoint-tablet}) {
+  .image {
+    height: 200px;
+  }
+}
+
+@media (max-width: #{$breakpoint-phone}) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  .image {
+    height: 180px;
+  }
+}

@@ -28,3 +28,13 @@
   font-weight: 500;
   line-height: 1.5;
 }
+
+@media (max-width: #{$breakpoint-phone}) {
+  .card {
+    flex: 1;
+  }
+
+  .value {
+    font-size: 28px;
+  }
+}

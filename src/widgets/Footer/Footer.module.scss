@@ -33,3 +33,14 @@
     color: $color-accent;
   }
 }
+
+@media (max-width: #{$breakpoint-phone}) {
+  .content {
+    flex-direction: column;
+    gap: $space-md;
+  }
+
+  .links {
+    gap: $space-md;
+  }
+}

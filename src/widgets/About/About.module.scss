@@ -28,3 +28,16 @@
   flex-direction: column;
   gap: $space-md;
 }
+
+@media (max-width: #{$breakpoint-tablet}) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: $space-2xl;
+  }
+}
+
+@media (max-width: #{$breakpoint-phone}) {
+  .stats {
+    flex-direction: row;
+  }
+}

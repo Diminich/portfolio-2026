@@ -6,3 +6,9 @@
   margin: 0 auto;
   padding: 0 $container-padding;
 }
+
+@media (max-width: #{$breakpoint-phone}) {
+  .container {
+    padding: 0 16px;
+  }
+}

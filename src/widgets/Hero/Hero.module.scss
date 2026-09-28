@@ -82,3 +82,64 @@
     object-fit: cover;
   }
 }
+
+@media (max-width: #{$breakpoint-tablet}) {
+  .content {
+    gap: $space-2xl;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .avatar {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media (max-width: #{$breakpoint-phone}) {
+  .hero {
+    padding: $space-3xl 0;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: $space-xl;
+    text-align: center;
+  }
+
+  .text {
+    display: contents;
+  }
+
+  .title {
+    order: 1;
+    margin-bottom: 0;
+    font-size: 36px;
+  }
+
+  .avatar {
+    order: 2;
+    width: 200px;
+    height: 200px;
+  }
+
+  .subtitle {
+    order: 3;
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+
+  .actions {
+    order: 4;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 0;
+  }
+
+  .socials {
+    order: 5;
+    justify-content: center;
+  }
+}
